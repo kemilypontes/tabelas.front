@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho sobre Tabelas HTML - Colspan e Rowspan</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        h1:first-of-type {
+            margin-top: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 15px 0 30px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        .titulo-amarelo {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+        .cabecalho-azul {
+            background-color: #64b5f6;
+            font-weight: bold;
+        }
+        .mes-verde {
+            background-color: #a5d6a7;
+            font-weight: bold;
+        }
+        .serie-amarela {
+            background-color: #ffeb3b;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        .ano-azul {
+            background-color: #64b5f6;
+            font-weight: bold;
+        }
+        .ano-verde {
+            background-color: #81c784;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        .ano-amarelo {
+            background-color: #ffeb3b;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        .titulo-vermelho {
+            background-color: #e53935;
+            color: white;
+            font-weight: bold;
+        }
+        .local-laranja {
+            background-color: #ff9800;
+            color: white;
+            font-weight: bold;
+        }
+        .apart-amarelo {
+            background-color: #ffeb3b;
+            font-weight: bold;
+        }
+        .lazer-amarelo {
+            background-color: #ffeb3b;
+        }
+        .pronto-laranja {
+            background-color: #ff9800;
+            color: white;
+            font-weight: bold;
+        }
+        .servico-verde {
+            background-color: #4caf50;
+            color: white;
+            font-weight: bold;
+        }
+        .veiculo-escuro {
+            background-color: #1b5e20;
+            color: white;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        .cabecalho-cinza {
+            background-color: #9e9e9e;
+            color: white;
+            font-weight: bold;
+        }
+        caption {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .ficha-tecnica td {
+            text-align: left;
+            vertical-align: top;
+        }
+        .descricao {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        p.instrucao {
+            background: #e3f2fd;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>tabela 1 - Vendas março e fevereiro 2010</h1>
+   
+    <table>
+        <tr>
+            <th colspan="2" class="titulo-amarelo">Vendas março 2010</th>
+        </tr>
+        <tr>
+            <th class="cabecalho-azul">Carro</th>
+            <th class="cabecalho-azul">Unidades</th>
+        </tr>
+        <tr>
+            <td>Gol</td>
+            <td>250.000</td>
+        </tr>
+        <tr>
+            <td>Uno</td>
+            <td>123.000</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="2" class="titulo-amarelo">Vendas fev. 2010</th>
+        </tr>
+        <tr>
+            <th class="cabecalho-azul">Carro</th>
+            <th class="cabecalho-azul">Unidades</th>
+        </tr>
+        <tr>
+            <td>Gol</td>
+            <td>250.000</td>
+        </tr>
+        <tr>
+            <td>Uno</td>
+            <td>123.000</td>
+        </tr>
+    </table>
+
+    <h1>tabela 2 - Vendas de Carros (Março e Fevereiro 2010)</h1>
+
+    <table>
+        <tr>
+            <th colspan="3" class="titulo-amarelo">Vendas de Carros</th>
+        </tr>
+        <tr>
+            <th colspan="2" class="mes-verde">Março</th>
+            <th class="mes-verde">2010</th>
+        </tr>
+        <tr>
+            <th class="cabecalho-azul">Carro</th>
+            <th class="cabecalho-azul">Unidades</th>
+            <th class="cabecalho-azul">Montadora</th>
+        </tr>
+        <tr>
+            <td>Gol</td>
+            <td>250.000</td>
+            <td>VW</td>
+        </tr>
+        <tr>
+            <td>Celta</td>
+            <td>190.000</td>
+            <td>GM</td>
+        </tr>
+        <tr>
+            <td>Uno</td>
+            <td>123.000</td>
+            <td>Fiat</td>
+        </tr>
+        <tr>
+            <th colspan="2" class="mes-verde">Fevereiro</th>
+            <th class="mes-verde">2010</th>
+        </tr>
+        <tr>
+            <th class="cabecalho-azul">Carro</th>
+            <th class="cabecalho-azul">Unidades</th>
+            <th class="cabecalho-azul">Montadora</th>
+        </tr>
+        <tr>
+            <td>Gol</td>
+            <td>230.000</td>
+            <td>VW</td>
+        </tr>
+        <tr>
+            <td>Celta</td>
+            <td>189.000</td>
+            <td>GM</td>
+        </tr>
+        <tr>
+            <td>Uno</td>
+            <td>114.000</td>
+            <td>Fiat</td>
+        </tr>
+    </table>
+
+    <h1>tabela 3 - Campeonato Brasileiro (Série A)</h1>
+
+    <table>
+        <caption>Campeonato Brasileiro</caption>
+        <tr>
+            <th rowspan="4" class="serie-amarela">Série A</th>
+            <th class="cabecalho-azul">Time</th>
+            <th class="cabecalho-azul">Pontos</th>
+        </tr>
+        <tr>
+            <td>flamengo</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>Juventude</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>internacional</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <h1>tabela 4 - Campeonato Brasileiro (Série A e B)</h1>
+
+    <table>
+        <caption>Campeonato Brasileiro</caption>
+        <tr>
+            <th rowspan="4" class="serie-amarela">Série A</th>
+            <th class="cabecalho-azul">Time</th>
+            <th class="cabecalho-azul">Pontos</th>
+        </tr>
+        <tr>
+            <td>flamengo</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>Juventude</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>internacional</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <th rowspan="4" class="serie-amarela">Série B</th>
+            <th class="cabecalho-azul">Time</th>
+            <th class="cabecalho-azul">Pontos</th>
+        </tr>
+        <tr>
+            <td>Grêmio</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Corinthians</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>operario</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <h1>tabela 5 - Vendas Trimestrais</h1>
+
+    <table>
+        <tr>
+            <th colspan="4" class="ano-azul">Vendas Trimestrais</th>
+        </tr>
+        <tr>
+            <th rowspan="3" class="ano-amarelo">2010</th>
+            <td>144.000</td>
+            <th rowspan="3" class="ano-verde">2009</th>
+            <td>188.000</td>
+        </tr>
+        <tr>
+            <td>139.580</td>
+            <td>179.580</td>
+        </tr>
+        <tr>
+            <td>254.900</td>
+            <td>298.500</td>
+        </tr>
+    </table>
+
+    <h1>tabela 6 - Visitas mensais</h1>
+
+    <table>
+        <tr>
+            <th colspan="3" class="ano-azul">Visitas mensais</th>
+        </tr>
+        <tr>
+            <th rowspan="5" class="ano-amarelo">2010</th>
+            <td colspan="2">144.000</td>
+        </tr>
+        <tr>
+            <td colspan="2">139.580</td>
+        </tr>
+        <tr>
+            <td colspan="2">254.900</td>
+        </tr>
+        <tr>
+            <th>Média</th>
+            <th>Períodos</th>
+        </tr>
+        <tr>
+            <td>201.000</td>
+            <td>3</td>
+        </tr>
+    </table>
+  
+    <h1>tabela 7 - ficha tecnica</h1>
+
+    <table class="ficha-tecnica" border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse; width:100%; max-width:700px;">
+        <tr>
+            <th colspan="3" style="background-color:#333; color:white; padding:10px;">Ficha técnica</th>
+        </tr>
+        <tr>
+            <td rowspan="6" style="width:200px; background:#eee; text-align:center; vertical-align:top; padding:10px;">
+                <img src="https://car-images.bauersecure.com/wp-images/5642/vwpologti2010_1.jpg" 
+                     alt="Polo GTI" 
+                     style="max-width:180px; height:auto; border-radius:4px;">
+                <br>
+                <small><strong>Polo GTI</strong></small>
+                
+                <div style="margin-top:15px; text-align:left; font-size:13px; line-height:1.4; background:#f9f9f9; padding:10px; border-radius:4px;">
+                    O novo hatch da VW deve chegar à Europa em 2009 e sua versão esportiva vem um ano depois. 
+                    O modelo deve utilizar a plataforma PQ25. A versão atual utiliza a PQ 24, que também equipa 
+                    nossos Gol e Fox. A nova plataforma já é utilizada no espanhol Seat Ibiza. Também graças à 
+                    PQ25 os brasileiros receberam o conjunto de suspensão dianteira do novo Gol. O motor que 
+                    equipará o novo Polo GTI deve ser um 1.4 turbo TSI (com injeção direta de combustível) a 
+                    gasolina e que produz 180 cv de potência. E não é só este número que impressiona: a 
+                    expectativa é de que o propulsor deve entregar um consumo de cerca de 14,2 km/l.
+                </div>
+            </td>
+            <th>Nome</th>
+            <td>Polo GTI</td>
+        </tr>
+        <tr>
+            <th>Valor:</th>
+            <td>99 800 reais</td>
+        </tr>
+        <tr>
+            <th>Garantia</th>
+            <td>1 ano sem limite de km</td>
+        </tr>
+        <tr>
+            <th>Consumo Cidade</th>
+            <td>9,7</td>
+        </tr>
+        <tr>
+            <th>Consumo estrada (km/l)</th>
+            <td>13,1</td>
+        </tr>
+        <tr>
+            <th>Tanque de combustível/autonomia</th>
+            <td>45 / 589,5</td>
+        </tr>
+    </table>
+
+    <h1>Tabela 8 - Serviços Mecânicos</h1>
+
+    <table>
+        <tr>
+            <th colspan="4" class="servico-verde">Tabela de Serviços Mecânicos</th>
+        </tr>
+        <tr>
+            <th class="cabecalho-cinza">Veículos</th>
+            <th class="cabecalho-cinza">Serviço</th>
+            <th class="cabecalho-cinza">Tempo Previsto</th>
+            <th class="cabecalho-cinza">Valor</th>
+        </tr>
+        <tr>
+            <th rowspan="4" class="veiculo-escuro">Nacionais</th>
+            <td>Caminhonete S10</td>
+            <td>Suspensão</td>
+            <td>3 horas e 25 minutos</td>
+            <td>350,00</td>
+        </tr>
+        <tr>
+            <td>Caminhonete Ranger</td>
+            <td>Freio</td>
+            <td>3 horas e 45 minutos</td>
+            <td>200,00</td>
+        </tr>
+        <tr>
+            <td>Caminhonete Hilux</td>
+            <td>Troca de Bateria</td>
+            <td>30 minutos</td>
+            <td>25,00</td>
+        </tr>
+        <tr>
+            <td>Caminhonete D10</td>
+            <td>Alinhamento</td>
+            <td>1 hora e 40 minutos</td>
+            <td>220,00</td>
+        </tr>
+    </table>
+
+    <h1>tabela 9 - Venha Morar em Nossos Belos Residenciais – Viver Serra</h1>
+
+    <table>
+        <tr>
+            <th colspan="7" class="titulo-vermelho">Venha Morar em Nossos Belos Residenciais - Viver Serra</th>
+        </tr>
+        <tr>
+            <th class="apart-amarelo">Apartamentos</th>
+            <th class="local-laranja">Localização</th>
+            <th class="local-laranja">Laranjeiras - 4 min.</th>
+            <th class="local-laranja">Manguinhos- 2 min.</th>
+            <th class="local-laranja">Vitoria- 8 min.</th>
+            <th colspan="2" class="local-laranja">&nbsp;</th>
+        </tr>
+        <tr>
+            <td>2 Quartos</td>
+            <td>3 Quartos</td>
+            <td>4 Quartos</td>
+            <td colspan="4" class="pronto-laranja" style="text-align:center;">Corretor On-Line</td>
+        </tr>
+        <tr>
+            <td>1 Suíte</td>
+            <td>2 Suíte</td>
+            <td>3 Suítes</td>
+            <td>3333-2333</td>
+            <td>9999-9969</td>
+            <td>8888-8868</td>
+            <td>8111-1169</td>
+        </tr>
+        <tr>
+            <th class="lazer-amarelo">Lazer</th>
+            <td colspan="2" class="lazer-amarelo">Piscina, Salão de Festas, Quadra Poliesportivas</td>
+            <td colspan="2" class="pronto-laranja">Pronto Para Morar</td>
+            <td colspan="2" class="pronto-laranja">LANÇAMENTO</td>
+        </tr>
+    </table>
+
+    <hr>
+    <p style="text-align:center; color:#666; font-size:0.9em;">
+        rodapeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.gabriel.andrade.eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee<br>
+       
+    </p>
+
+</body>
+</html>
